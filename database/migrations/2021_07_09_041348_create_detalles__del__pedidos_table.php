@@ -18,6 +18,7 @@ class CreateDetallesDelPedidosTable extends Migration
             $table->foreign('Id_Producto')->references('id')->on('productos');
             $table->float('Resumen_Precio', 6);
             $table->integer('Cantidad', 2);
+            $table->timestamps();
         });
     }
 

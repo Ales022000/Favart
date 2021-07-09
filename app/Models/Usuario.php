@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Usuario extends Model
 {
     use HasFactory;
+    public $timestamps = false;
 
     protected $fillable = [
         'Nombre_Usuario', 
@@ -15,6 +16,9 @@ class Usuario extends Model
         'Fecha_Registro',
         'Email',
     ];
-    
+
+    public function Crear_Usuario(){
+        return true;
+    }
 }
 

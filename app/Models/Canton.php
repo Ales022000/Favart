@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Canton extends Model
 {
     use HasFactory;
+    public $timestamps = false;
 
     protected $fillable = [
         'Id_Provnicia', 
@@ -16,5 +17,7 @@ class Canton extends Model
     public function provincia(){
         return $this->hasOne(Provincia::class);
 }
-
+     public function Crear_Canton(){
+        return true;
+    }
 }

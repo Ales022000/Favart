@@ -17,6 +17,7 @@ class CreateCantonsTable extends Migration
             $table->id();
             $table->foreign('Id_Provincia')->references('id')->on('provincias');
             $table->string('Nombre', 25);
+            $table->timestamps();
         });
     }
 

@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Distrito extends Model
 {
     use HasFactory;
+    public $timestamps = false;
 
     protected $fillable = [
         'Id_Provincia', 
@@ -17,4 +18,7 @@ class Distrito extends Model
     public function canton(){
         return $this->hasOne(Canton::class);
 }
+     public function Crear_Distrito(){
+        return true;
+    }
 }

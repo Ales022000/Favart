@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Administrador extends Model
 {
     use HasFactory;
+    public $timestamps = false;
 
     protected $fillable = [
         'Id_Usuario', 
@@ -16,4 +17,9 @@ class Administrador extends Model
     public function usuario(){
         return $this->hasOne(Usuario::class);
 }
+
+     public function Crear_Administrador(){
+        return true;
+    }
+
 }

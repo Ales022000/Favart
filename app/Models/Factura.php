@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Factura extends Model
 {
     use HasFactory;
+    public $timestamps = false;
 
     protected $fillable = [
         'Id_Pedido', 
@@ -19,4 +20,8 @@ class Factura extends Model
     public function pedido(){
         return $this->hasOne(Pedido::class);
 }
+
+     public function Crear_Factura(){
+        return true;
+    }
 }

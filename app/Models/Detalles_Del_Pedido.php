@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Detalles_Del_Pedido extends Model
 {
     use HasFactory;
+    public $timestamps = false;
 
     protected $fillable = [
         'Id_Producto', 
@@ -17,4 +18,8 @@ class Detalles_Del_Pedido extends Model
     public function producto(){
         return $this->hasOne(Producto::class);
 }
+    public function Crear_Detalles_Del_Pedido(){
+        return true;
+    }
+
 }

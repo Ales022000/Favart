@@ -18,6 +18,7 @@ class CreateDistritosTable extends Migration
             $table->foreign('Id_Canton')->references('id')->on('cantons');
             $table->foreign('Id_Provincia')->references('id')->on('provincias');
             $table->string('Nombre', 25);
+            $table->timestamps();
         });
     }
 

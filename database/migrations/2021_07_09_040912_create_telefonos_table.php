@@ -17,6 +17,7 @@ class CreateTelefonosTable extends Migration
                         
             $table->foreign('Id_Cliente')->references('id')->on('clientes');
             $table->string('Numero_telefonico', 25);
+            $table->timestamps();
             
         });
     }

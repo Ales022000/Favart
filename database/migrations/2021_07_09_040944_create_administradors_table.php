@@ -17,6 +17,7 @@ class CreateAdministradorsTable extends Migration
             $table->id();
             $table->foreign('Id_Usuario')->references('id')->on('usuarios');
             $table->string('Nombre_Administrador', 25);
+            $table->timestamps();
         });
     }
 

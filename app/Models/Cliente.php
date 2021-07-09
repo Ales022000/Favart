@@ -8,7 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Cliente extends Model
 {
     use HasFactory;
-    
+    public $timestamps = false;
+ 
     protected $fillable = [
         'Id_Usuario', 
         'Nombre',
@@ -24,4 +25,8 @@ class Cliente extends Model
     public function usuario(){
         return $this->hasOne(Usuario::class);
 }
+    public function Crear_Cliente(){
+        return true;
+    }
+
 }

@@ -19,6 +19,7 @@ class CreateFacturasTable extends Migration
             $table->date('Fecha');
             $table->integer('Cantidad', 2);
             $table->integer('Resumen', 50);
+            $table->timestamps();
         });
     }
 

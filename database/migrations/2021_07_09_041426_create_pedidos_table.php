@@ -18,6 +18,7 @@ class CreatePedidosTable extends Migration
             $table->date('Fecha_Pedido')->references('id')->on('productos');
             $table->date('Fecha_Pedido', 6);
             $table->string('Estado', 25);
+            $table->timestamps();
         });
     }
 

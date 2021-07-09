@@ -17,6 +17,7 @@ class CreateCarritoDeComprasTable extends Migration
             $table->id();
             $table->float('Resumen_Precio', 7);
             $table->int('Cantidad', 3);
+            $table->timestamps();
         });
     }
 

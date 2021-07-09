@@ -24,6 +24,7 @@ class CreateClientesTable extends Migration
             $table->foreign('Id_Distrito')->references('id')->on('distritos');
             $table->foreign('Id_Canton')->references('id')->on('cantons');
             $table->foreign('Id_Provincia')->references('id')->on('provincias');
+            $table->timestamps();
         });
     }
 
