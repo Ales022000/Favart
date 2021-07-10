@@ -2,10 +2,10 @@
 
 namespace Tests\Unit;
 
-use tests\TestCase;
+use Tests\TestCase;
 use App\Models\Usuario;
-use Illuminiate\Support\Collection;
-use Illuminate\Foundation\RefreshDatabase;
+use Illuminate\Support\Collection;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Database\QuerryException;
 use Illuminate\Database\Eloquent\Factories\Factory;
 

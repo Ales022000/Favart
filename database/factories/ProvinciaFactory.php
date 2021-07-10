@@ -4,6 +4,8 @@ namespace Database\Factories;
 
 use App\Models\Provincia;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
+use Illuminate\Database\QueryException;
 
 class ProvinciaFactory extends Factory
 {

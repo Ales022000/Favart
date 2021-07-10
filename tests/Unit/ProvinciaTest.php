@@ -2,11 +2,11 @@
 
 namespace Tests\Unit;
 
-use test\TestCase;
-use App\Models\Usuario;
-use Illuminiate\Support\Collection;
-use Illuminate\Foundation\RefreshDatabase;
-use Illuminate\Database\QuerryException;
+use Tests\TestCase;
+use App\Models\Provincia;
+use Illuminate\Support\Collection;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Database\QueryException;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 
@@ -18,7 +18,7 @@ class ProvinciaTest extends TestCase
     {
         $provincia = Provincia::factory() -> create();
 
-        $creado = $provincia -> Crear_Provincia();
+        $creado = $provincia->Crear_Provincia();
 
         $this->assertTrue($creado);
     }

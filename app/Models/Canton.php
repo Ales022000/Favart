@@ -11,7 +11,7 @@ class Canton extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'Id_Provnicia', 
+        'Id_Provincia', 
         'Nombre',
     ];
     public function provincia(){

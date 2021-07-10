@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CantonController;
+use App\Http\Controllers\ProvinciaController;
+use App\Http\Controllers\UsuarioController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +17,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::post('/provincias', [ProvinciaController::class, 'store']);
+Route::post('/cantones', [CantonController::class, 'store']);
+Route::post('/usuarios', [CantonController::class, 'store']);
+

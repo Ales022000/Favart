@@ -2,20 +2,19 @@
 
 namespace Database\Factories;
 
-use App\Models\Usuario;
+use App\Models\Distrito;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 use Illuminate\Database\QueryException;
 
-
-class UsuarioFactory extends Factory
+class DistritoFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Usuario::class;
+    protected $model = Distrito::class;
 
     /**
      * Define the model's default state.
@@ -25,10 +24,9 @@ class UsuarioFactory extends Factory
     public function definition()
     {
         return [
-            'Nombre_Usuario' => $this->faker->name(), 
-            'Contraseña' => $this->faker->name(),
-            'Fecha_Registro' => $this->faker->name(),
-            'Email' => $this->faker->name(),
+            'Id_Provincia' => Provincia::factory() -> create(),
+            'Id_Canton' => Canton::factory() -> create(),
+            'Nombre' => $this -> faker->name(), 
         ];
     }
 }
