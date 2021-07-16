@@ -13,21 +13,15 @@ class CreateCarritoDeComprasTable extends Migration
      */
     public function up()
     {
-        Schema::create('carrito_de__compras', function (Blueprint $table) {
+        Schema::create('carrito_de_compras', function (Blueprint $table) {
             $table->id();
             $table->float('Resumen_Precio', 7);
-            $table->int('Cantidad', 3);
+            $table->float('Cantidad', 3);
             $table->timestamps();
         });
     }
-
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
-        Schema::dropIfExists('carrito_de__compras');
+        Schema::drop('carrito_de_compras');
     }
 }

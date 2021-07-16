@@ -15,15 +15,15 @@ class CreateClientesTable extends Migration
     {
         Schema::create('clientes', function (Blueprint $table) {
             $table->id();
-            $table->foreign('Id_Usuario')->references('id')->on('usuarios');
+            $table->foreignId('Id_Usuario')->constrained('usuarios');
             $table->string('Nombre', 25);
             $table->string('Primer_Apellido', 25);
             $table->string('Segundo_Apellido', 25);
-            $table->int('Edad', 2);
-            $table->foreign('Id_Barrio')->references('id')->on('barrios');
-            $table->foreign('Id_Distrito')->references('id')->on('distritos');
-            $table->foreign('Id_Canton')->references('id')->on('cantons');
-            $table->foreign('Id_Provincia')->references('id')->on('provincias');
+            $table->float('Edad', 2);
+            $table->foreignId('Id_Barrio')->constrained('barrios');
+            $table->foreignId('Id_Distrito')->constrained('distritos');
+            $table->foreignId('Id_Canton')->constrained('cantons');
+            $table->foreignId('Id_Provincia')->constrained('provincias');
             $table->timestamps();
         });
     }

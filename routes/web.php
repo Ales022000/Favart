@@ -20,7 +20,5 @@ use App\Http\Controllers\UsuarioController;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::post('/provincias', [ProvinciaController::class, 'store']);
 Route::post('/cantones', [CantonController::class, 'store']);
-Route::post('/usuarios', [CantonController::class, 'store']);
 

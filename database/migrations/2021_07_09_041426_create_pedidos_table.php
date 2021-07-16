@@ -15,7 +15,6 @@ class CreatePedidosTable extends Migration
     {
         Schema::create('pedidos', function (Blueprint $table) {
             $table->id();
-            $table->date('Fecha_Pedido')->references('id')->on('productos');
             $table->date('Fecha_Pedido', 6);
             $table->string('Estado', 25);
             $table->timestamps();

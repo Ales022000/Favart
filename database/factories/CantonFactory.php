@@ -5,7 +5,6 @@ namespace Database\Factories;
 use App\Models\Canton;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
-use Illuminate\Database\QueryException;
 
 class CantonFactory extends Factory
 {

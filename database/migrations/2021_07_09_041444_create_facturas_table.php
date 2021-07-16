@@ -15,10 +15,10 @@ class CreateFacturasTable extends Migration
     {
         Schema::create('facturas', function (Blueprint $table) {
             $table->id();
-            $table->foreign('Id_Pedido')->references('id')->on('pedidos');
+            $table->foreignId('Id_Pedido')->constrained('pedidos');
             $table->date('Fecha');
-            $table->integer('Cantidad', 2);
-            $table->integer('Resumen', 50);
+            $table->float('Cantidad', 2);
+            $table->string('Resumen', 50);
             $table->timestamps();
         });
     }

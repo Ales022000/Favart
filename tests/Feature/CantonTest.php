@@ -17,7 +17,7 @@ class CantonTest extends TestCase
      */
     public function test_Se_Crea_Canton()
     {
-        $this -> whithoutExceptionHandLing();
+        $this -> withoutExceptionHandLing();
 
         $data = [
             'Nombre' => 'Liberia',

@@ -17,8 +17,8 @@ class CreateUsuariosTable extends Migration
             $table->id();
             $table->string('Nombre_Usuario', 25);
             $table->string('Contraseña', 25);
-            $table->date('Fecha_Registo');
-            $table->string('Correo', 50);
+            $table->date('Fecha_Registro');
+            $table->string('Email', 50);
             $table->timestamps();
         });
     }

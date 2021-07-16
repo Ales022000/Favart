@@ -27,8 +27,8 @@ class UsuarioFactory extends Factory
         return [
             'Nombre_Usuario' => $this->faker->name(), 
             'Contraseña' => $this->faker->name(),
-            'Fecha_Registro' => $this->faker->name(),
-            'Email' => $this->faker->name(),
+            'Fecha_Registro' => $this->faker->date(),
+            'Email' => $this->faker->email(),
         ];
     }
 }

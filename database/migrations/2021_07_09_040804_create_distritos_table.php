@@ -15,8 +15,8 @@ class CreateDistritosTable extends Migration
     {
         Schema::create('distritos', function (Blueprint $table) {
             $table->id();
-            $table->foreign('Id_Canton')->references('id')->on('cantons');
-            $table->foreign('Id_Provincia')->references('id')->on('provincias');
+            $table->foreignId('Id_Canton')->constrained('cantons');
+            $table->foreignId('Id_Provincia')->constrained('provincias');
             $table->string('Nombre', 25);
             $table->timestamps();
         });

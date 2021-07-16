@@ -15,9 +15,9 @@ class CreateBarriosTable extends Migration
     {
         Schema::create('barrios', function (Blueprint $table) {
             $table->id();
-            $table->foreign('Id_Distrito')->references('id')->on('distritos');
-            $table->foreign('Id_Canton')->references('id')->on('cantons');
-            $table->foreign('Id_Provincia')->references('id')->on('provincias');
+            $table->foreignId('Id_Distrito')->constrained('distritos');
+            $table->foreignId('Id_Canton')->constrained('cantons');
+            $table->foreignId('Id_Provincia')->constrained('provincias');
             $table->string('Nombre', 25);
             $table->timestamps();
         });
