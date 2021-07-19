@@ -20,6 +20,8 @@ class CantonTest extends TestCase
         $this -> withoutExceptionHandLing();
 
         $data = [
+            'id'=>'1',
+            'Id_Provincia' => '1',
             'Nombre' => 'Liberia',
         ];
 
